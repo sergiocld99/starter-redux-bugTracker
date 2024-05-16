@@ -1,5 +1,5 @@
-// npx webpack --watch
-// live-server
+// configurado para ejecutar servidor y actualizarlo ante cada cambio!
+// npx webpack-dev-server
 
 import { addBug, removeBug, solveBug } from "./redux/actions"
 import { store } from "./redux/store"
