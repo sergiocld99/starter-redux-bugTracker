@@ -1,4 +1,4 @@
-import reducer from "./reducer";
+import { reducer } from "./reducer";
 import { configureStore } from "@reduxjs/toolkit";
 
 // createStore(reducer) from redux is deprecated
