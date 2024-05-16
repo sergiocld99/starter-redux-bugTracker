@@ -7,15 +7,15 @@ export default function reducer(state = [], action){
         case actions.ADD_BUG:
             return [...state, {
                 id: ++lastId,
-                description: action.payload.description,
+                description: action.payload,
                 solved: false
             }]
 
         case actions.REMOVE_BUG:
-            return state.filter(bug => bug.id != action.payload.id)
+            return state.filter(bug => bug.id != action.payload)
 
         case actions.SOLVE_BUG:
-            return state.map(bug => bug.id === action.payload.id ? ({
+            return state.map(bug => bug.id === action.payload ? ({
                 ...bug,
                 solved: true
              }) : bug )
