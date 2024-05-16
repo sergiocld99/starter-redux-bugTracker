@@ -1,7 +1,13 @@
 import { createReducer } from "@reduxjs/toolkit";
 import * as actions from "./actions";
 
-const initialState = []
+type Bug = {
+    id: number,
+    description: string,
+    solved: boolean
+}
+
+const initialState: Bug[] = []
 let lastId = 0
 
 export const reducer = createReducer(initialState, (builder) => {
