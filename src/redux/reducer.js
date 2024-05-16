@@ -1,26 +1,19 @@
-import * as actions from "./actionTypes";
+import { createReducer } from "@reduxjs/toolkit";
+import * as actions from "./actions";
 
+const initialState = []
 let lastId = 0
 
-export default function reducer(state = [], action){
-    switch(action.type){
-        case actions.ADD_BUG:
-            return [...state, {
-                id: ++lastId,
-                description: action.payload.description,
-                solved: false
-            }]
-
-        case actions.REMOVE_BUG:
-            return state.filter(bug => bug.id != action.payload.id)
-
-        case actions.SOLVE_BUG:
-            return state.map(bug => bug.id === action.payload.id ? ({
-                ...bug,
-                solved: true
-             }) : bug )
-
-        default:
-            return state
-    }
-}
+export const reducer = createReducer(initialState, (builder) => {
+    builder.addCase(actions.addBug, (state, action) => [
+        ...state, {
+            id: ++lastId,
+            description: action.payload,
+            solved: false
+        }
+    ]).addCase(actions.removeBug, (state, action) => state.filter(
+        bug => bug.id != action.payload
+    )).addCase(actions.solveBug, (state, action) => state.map(
+        bug => bug.id === action.payload ? {...bug, solved: true} : bug
+    ))
+})
