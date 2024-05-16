@@ -1,4 +1,6 @@
-import { createStore } from "redux";
 import reducer from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
 
-export const store = createStore(reducer)
+// createStore(reducer) from redux is deprecated
+// use @reduxjs/toolkit instead
+export const store = configureStore({reducer})
