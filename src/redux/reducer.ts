@@ -1,11 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import * as actions from "./actions";
-
-type Bug = {
-    id: number,
-    description: string,
-    solved: boolean
-}
+import Bug from "../model/bug";
 
 const initialState: Bug[] = []
 let lastId = 0
