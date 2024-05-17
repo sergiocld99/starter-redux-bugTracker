@@ -16,7 +16,9 @@ const Dashboard = () => {
       {bugs.length === 0 ? (
         <h3>No bugs yet 🧉</h3>
       ) : (
-        bugs.map((b) => <BugCard {...b} />)
+        bugs.map((b) => <li key={b.id} id={`bug-${b.id}`}>
+          <BugCard {...b} />
+        </li>)
       )}
     </ul>
   );
