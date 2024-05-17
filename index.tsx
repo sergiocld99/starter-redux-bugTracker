@@ -26,4 +26,4 @@ store.dispatch(removeBug(1))
 store.dispatch(addBug("Un tercer bug"))
 store.dispatch(solveBug(2))
 
-unsuscribe();
+//unsuscribe();
