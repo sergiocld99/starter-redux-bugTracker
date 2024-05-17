@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f100f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.main-container {
+    padding-left: 30px;
+}
+
+h1 {
+    padding-block: 20px;
+}
+
+h2 {
+    padding-block: 20px;
+}
+
+.form-container {
+    padding-block: 20px;
+}
+
+.form-container .text-input {
+    height: 100px;
+    width: 70%;
+    border-radius: 5px;
+    border: solid gray 2px;
+    background-color: rgb(41, 41, 41);
+    padding: 10px;
+    font-size: medium;
+}
+
+.form-container .add-btn {
+    height: 40px;
+    margin-left: 40px;
+    width: 100px;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid brown 2px;
+}
+
+.bug-container {
+    border-radius: 5px;
+    border: solid gray 2px;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #262926;
+    display: flex;
+    align-items: center;
+}
+
+.bug-solved {
+    background-color: green;
+    border: solid greenyellow 2px;
+}
+
+.bug-container .bug-information {
+    width: calc(100% - 50px);
+}
+
+.bug-container .emoji-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: larger;
+    padding-bottom: 2px;
+}
+
+.bug-solved .emoji-btn {
+    border: solid greenyellow 2px;
+    background-color: #004400;
+}
+
+.bug-unsolved {
+    background-color: brown;
+    border: solid red 2px;
+}
+
+.bug-unsolved .emoji-btn {
+    border: solid red 2px;
+    background-color: #440000;
+}
