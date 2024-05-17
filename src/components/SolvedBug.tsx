@@ -1,5 +1,7 @@
 import React from "react";
 import Bug from "../model/bug";
+import { store } from "../redux/store";
+import { removeBug } from "../redux/actions";
 
 const SolvedBug = (b: Bug) => {
     return (
@@ -10,7 +12,9 @@ const SolvedBug = (b: Bug) => {
                 <p><i>Solved</i> 😎</p>
             </div>
 
-            <button className="emoji-btn">🚮</button>
+            <button className="emoji-btn" onClick={e => {
+                store.dispatch(removeBug(b.id))
+            }}>🚮</button>
         </div>
     )
 }
