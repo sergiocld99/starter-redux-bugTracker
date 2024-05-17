@@ -7,11 +7,11 @@ let lastId = 0
 
 export const reducer = createReducer(initialState, (builder) => {
     builder.addCase(actions.addBug, (state, action) => [
-        ...state, {
+        {
             id: ++lastId,
             description: action.payload,
             solved: false
-        }
+        }, ...state
     ]).addCase(actions.removeBug, (state, action) => state.filter(
         bug => bug.id != action.payload
     )).addCase(actions.solveBug, (state, action) => state.map(
