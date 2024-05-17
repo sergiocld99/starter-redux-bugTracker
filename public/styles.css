@@ -11,6 +11,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .main-container {
     padding-left: 30px;
 }
@@ -47,10 +51,6 @@ h2 {
     border: solid brown 2px;
 }
 
-.form-container .add-btn:hover {
-    cursor: pointer;
-}
-
 .bug-container {
     border-radius: 5px;
     border: solid gray 2px;
@@ -58,6 +58,8 @@ h2 {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #262926;
+    display: flex;
+    align-items: center;
 }
 
 .bug-solved {
@@ -65,7 +67,29 @@ h2 {
     border: solid greenyellow 2px;
 }
 
+.bug-container .bug-information {
+    width: calc(100% - 50px);
+}
+
+.bug-container .emoji-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: larger;
+    padding-bottom: 2px;
+}
+
+.bug-solved .emoji-btn {
+    border: solid greenyellow 2px;
+    background-color: #004400;
+}
+
 .bug-unsolved {
     background-color: brown;
     border: solid red 2px;
+}
+
+.bug-unsolved .emoji-btn {
+    border: solid red 2px;
+    background-color: #440000;
 }

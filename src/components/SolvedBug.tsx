@@ -4,9 +4,13 @@ import Bug from "../model/bug";
 const SolvedBug = (b: Bug) => {
     return (
         <div className="bug-container bug-solved" >
-            <h3>#{b.id}</h3>
-            <p>{b.description}</p>
-            <i>Resuelto 😎</i>
+            <div className="bug-information">
+                <h3>#{b.id}</h3>
+                <p>{b.description}</p>
+                <p><i>Solved</i> 😎</p>
+            </div>
+
+            <button className="emoji-btn">🚮</button>
         </div>
     )
 }

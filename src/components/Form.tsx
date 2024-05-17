@@ -11,7 +11,7 @@ const Form = () => {
             <input className="text-input" onChange={e => {
                 setDescription(e.target.value)
             }}></input>
-            <input className="add-btn" type="button" value="Add" onClick={e => {
+            <button className="add-btn" onClick={e => {
                 if (description?.trim().length >= 10){
                     store.dispatch(addBug(description.trim()))
 
@@ -19,7 +19,7 @@ const Form = () => {
                     alert("La descripción debe contener al menos 10 caracteres")
                 }
                 
-            }} />
+            }}>Add</button>
         </div>
     )
 }
